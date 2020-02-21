@@ -1,0 +1,467 @@
+2018-10-05 19:51:03 [-][-][-][error][yii\db\Exception] PDOException: SQLSTATE[HY000] [1045] Access denied for user 'root'@'localhost' (using password: NO) in C:\Program Files (x86)\Ampps\www\advanced\vendor\yiisoft\yii2\db\Connection.php:687
+Stack trace:
+#0 C:\Program Files (x86)\Ampps\www\advanced\vendor\yiisoft\yii2\db\Connection.php(687): PDO->__construct('mysql:host=loca...', 'root', '', NULL)
+#1 C:\Program Files (x86)\Ampps\www\advanced\vendor\yiisoft\yii2\db\Connection.php(613): yii\db\Connection->createPdoInstance()
+#2 C:\Program Files (x86)\Ampps\www\advanced\vendor\yiisoft\yii2\db\Connection.php(996): yii\db\Connection->open()
+#3 C:\Program Files (x86)\Ampps\www\advanced\vendor\yiisoft\yii2\db\Connection.php(983): yii\db\Connection->getMasterPdo()
+#4 C:\Program Files (x86)\Ampps\www\advanced\vendor\yiisoft\yii2\db\Command.php(253): yii\db\Connection->getSlavePdo()
+#5 C:\Program Files (x86)\Ampps\www\advanced\vendor\yiisoft\yii2\db\Command.php(1143): yii\db\Command->prepare(true)
+#6 C:\Program Files (x86)\Ampps\www\advanced\vendor\yiisoft\yii2\db\Command.php(399): yii\db\Command->queryInternal('fetchAll', NULL)
+#7 C:\Program Files (x86)\Ampps\www\advanced\vendor\yiisoft\yii2\db\mysql\Schema.php(312): yii\db\Command->queryAll()
+#8 C:\Program Files (x86)\Ampps\www\advanced\vendor\yiisoft\yii2\db\mysql\Schema.php(125): yii\db\mysql\Schema->findColumns(Object(yii\db\TableSchema))
+#9 C:\Program Files (x86)\Ampps\www\advanced\vendor\yiisoft\yii2\db\Schema.php(744): yii\db\mysql\Schema->loadTableSchema('migration')
+#10 C:\Program Files (x86)\Ampps\www\advanced\vendor\yiisoft\yii2\db\Schema.php(194): yii\db\Schema->getTableMetadata('{{%migration}}', 'schema', true)
+#11 C:\Program Files (x86)\Ampps\www\advanced\vendor\yiisoft\yii2\console\controllers\MigrateController.php(210): yii\db\Schema->getTableSchema('{{%migration}}', true)
+#12 C:\Program Files (x86)\Ampps\www\advanced\vendor\yiisoft\yii2\console\controllers\BaseMigrateController.php(875): yii\console\controllers\MigrateController->getMigrationHistory(NULL)
+#13 C:\Program Files (x86)\Ampps\www\advanced\vendor\yiisoft\yii2\console\controllers\BaseMigrateController.php(166): yii\console\controllers\BaseMigrateController->getNewMigrations()
+#14 [internal function]: yii\console\controllers\BaseMigrateController->actionUp(0)
+#15 C:\Program Files (x86)\Ampps\www\advanced\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#16 C:\Program Files (x86)\Ampps\www\advanced\vendor\yiisoft\yii2\base\Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#17 C:\Program Files (x86)\Ampps\www\advanced\vendor\yiisoft\yii2\console\Controller.php(148): yii\base\Controller->runAction('', Array)
+#18 C:\Program Files (x86)\Ampps\www\advanced\vendor\yiisoft\yii2\base\Module.php(528): yii\console\Controller->runAction('', Array)
+#19 C:\Program Files (x86)\Ampps\www\advanced\vendor\yiisoft\yii2\console\Application.php(180): yii\base\Module->runAction('migrate', Array)
+#20 C:\Program Files (x86)\Ampps\www\advanced\vendor\yiisoft\yii2\console\Application.php(147): yii\console\Application->runAction('migrate', Array)
+#21 C:\Program Files (x86)\Ampps\www\advanced\vendor\yiisoft\yii2\base\Application.php(386): yii\console\Application->handleRequest(Object(yii\console\Request))
+#22 C:\Program Files (x86)\Ampps\www\advanced\yii(23): yii\base\Application->run()
+#23 {main}
+
+Next yii\db\Exception: SQLSTATE[HY000] [1045] Access denied for user 'root'@'localhost' (using password: NO) in C:\Program Files (x86)\Ampps\www\advanced\vendor\yiisoft\yii2\db\Connection.php:624
+Stack trace:
+#0 C:\Program Files (x86)\Ampps\www\advanced\vendor\yiisoft\yii2\db\Connection.php(996): yii\db\Connection->open()
+#1 C:\Program Files (x86)\Ampps\www\advanced\vendor\yiisoft\yii2\db\Connection.php(983): yii\db\Connection->getMasterPdo()
+#2 C:\Program Files (x86)\Ampps\www\advanced\vendor\yiisoft\yii2\db\Command.php(253): yii\db\Connection->getSlavePdo()
+#3 C:\Program Files (x86)\Ampps\www\advanced\vendor\yiisoft\yii2\db\Command.php(1143): yii\db\Command->prepare(true)
+#4 C:\Program Files (x86)\Ampps\www\advanced\vendor\yiisoft\yii2\db\Command.php(399): yii\db\Command->queryInternal('fetchAll', NULL)
+#5 C:\Program Files (x86)\Ampps\www\advanced\vendor\yiisoft\yii2\db\mysql\Schema.php(312): yii\db\Command->queryAll()
+#6 C:\Program Files (x86)\Ampps\www\advanced\vendor\yiisoft\yii2\db\mysql\Schema.php(125): yii\db\mysql\Schema->findColumns(Object(yii\db\TableSchema))
+#7 C:\Program Files (x86)\Ampps\www\advanced\vendor\yiisoft\yii2\db\Schema.php(744): yii\db\mysql\Schema->loadTableSchema('migration')
+#8 C:\Program Files (x86)\Ampps\www\advanced\vendor\yiisoft\yii2\db\Schema.php(194): yii\db\Schema->getTableMetadata('{{%migration}}', 'schema', true)
+#9 C:\Program Files (x86)\Ampps\www\advanced\vendor\yiisoft\yii2\console\controllers\MigrateController.php(210): yii\db\Schema->getTableSchema('{{%migration}}', true)
+#10 C:\Program Files (x86)\Ampps\www\advanced\vendor\yiisoft\yii2\console\controllers\BaseMigrateController.php(875): yii\console\controllers\MigrateController->getMigrationHistory(NULL)
+#11 C:\Program Files (x86)\Ampps\www\advanced\vendor\yiisoft\yii2\console\controllers\BaseMigrateController.php(166): yii\console\controllers\BaseMigrateController->getNewMigrations()
+#12 [internal function]: yii\console\controllers\BaseMigrateController->actionUp(0)
+#13 C:\Program Files (x86)\Ampps\www\advanced\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#14 C:\Program Files (x86)\Ampps\www\advanced\vendor\yiisoft\yii2\base\Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#15 C:\Program Files (x86)\Ampps\www\advanced\vendor\yiisoft\yii2\console\Controller.php(148): yii\base\Controller->runAction('', Array)
+#16 C:\Program Files (x86)\Ampps\www\advanced\vendor\yiisoft\yii2\base\Module.php(528): yii\console\Controller->runAction('', Array)
+#17 C:\Program Files (x86)\Ampps\www\advanced\vendor\yiisoft\yii2\console\Application.php(180): yii\base\Module->runAction('migrate', Array)
+#18 C:\Program Files (x86)\Ampps\www\advanced\vendor\yiisoft\yii2\console\Application.php(147): yii\console\Application->runAction('migrate', Array)
+#19 C:\Program Files (x86)\Ampps\www\advanced\vendor\yiisoft\yii2\base\Application.php(386): yii\console\Application->handleRequest(Object(yii\console\Request))
+#20 C:\Program Files (x86)\Ampps\www\advanced\yii(23): yii\base\Application->run()
+#21 {main}
+Additional Information:
+
+2018-10-05 19:51:03 [-][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'ALLUSERSPROFILE' => 'C:\\ProgramData'
+    'APPDATA' => 'C:\\Users\\david\\AppData\\Roaming'
+    'CommonProgramFiles' => 'C:\\Program Files (x86)\\Common Files'
+    'CommonProgramFiles(x86)' => 'C:\\Program Files (x86)\\Common Files'
+    'CommonProgramW6432' => 'C:\\Program Files\\Common Files'
+    'COMPUTERNAME' => 'LAPTOP-C51GQMFM'
+    'ComSpec' => 'C:\\windows\\system32\\cmd.exe'
+    'FPS_BROWSER_APP_PROFILE_STRING' => 'Internet Explorer'
+    'FPS_BROWSER_USER_PROFILE_STRING' => 'Default'
+    'HOMEDRIVE' => 'C:'
+    'HOMEPATH' => '\\Users\\david'
+    'LOCALAPPDATA' => 'C:\\Users\\david\\AppData\\Local'
+    'LOGONSERVER' => '\\\\LAPTOP-C51GQMFM'
+    'NUMBER_OF_PROCESSORS' => '4'
+    'OneDrive' => 'C:\\Users\\david\\OneDrive'
+    'OnlineServices' => 'Online Services'
+    'OS' => 'Windows_NT'
+    'Path' => 'C:\\Program Files (x86)\\Intel\\iCLS Client\\;C:\\Program Files\\Intel\\iCLS Client\\;C:\\windows\\system32;C:\\windows;C:\\windows\\System32\\Wbem;C:\\windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files\\Intel\\WiFi\\bin\\;C:\\Program Files\\Common Files\\Intel\\WirelessCommon\\;C:\\Program Files\\Git\\cmd;C:\\Program Files (x86)\\Ampps\\php-7.1;C:\\composer;C:\\Users\\david\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Users\\david\\AppData\\Local\\atom\\bin;C:\\Users\\david\\AppData\\Roaming\\Composer\\vendor\\bin'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'PHP_COMMAND' => 'php.exe'
+    'platformcode' => 'KV'
+    'PROCESSOR_ARCHITECTURE' => 'x86'
+    'PROCESSOR_ARCHITEW6432' => 'AMD64'
+    'PROCESSOR_IDENTIFIER' => 'Intel64 Family 6 Model 142 Stepping 9, GenuineIntel'
+    'PROCESSOR_LEVEL' => '6'
+    'PROCESSOR_REVISION' => '8e09'
+    'ProgramData' => 'C:\\ProgramData'
+    'ProgramFiles' => 'C:\\Program Files (x86)'
+    'ProgramFiles(x86)' => 'C:\\Program Files (x86)'
+    'ProgramW6432' => 'C:\\Program Files'
+    'PROMPT' => '$P$G'
+    'PSModulePath' => 'C:\\Program Files\\WindowsPowerShell\\Modules;C:\\windows\\system32\\WindowsPowerShell\\v1.0\\Modules'
+    'PUBLIC' => 'C:\\Users\\Public'
+    'RegionCode' => 'EMEA'
+    'SESSIONNAME' => 'Console'
+    'SystemDrive' => 'C:'
+    'SystemRoot' => 'C:\\windows'
+    'TEMP' => 'C:\\Users\\david\\AppData\\Local\\Temp'
+    'TMP' => 'C:\\Users\\david\\AppData\\Local\\Temp'
+    'USERDOMAIN' => 'LAPTOP-C51GQMFM'
+    'USERDOMAIN_ROAMINGPROFILE' => 'LAPTOP-C51GQMFM'
+    'USERNAME' => 'david'
+    'USERPROFILE' => 'C:\\Users\\david'
+    'windir' => 'C:\\windows'
+    'YII_PATH' => 'C:\\Program Files (x86)\\Ampps\\www\\advanced\\'
+    'PHP_SELF' => 'C:\\Program Files (x86)\\Ampps\\www\\advanced\\yii'
+    'SCRIPT_NAME' => 'C:\\Program Files (x86)\\Ampps\\www\\advanced\\yii'
+    'SCRIPT_FILENAME' => 'C:\\Program Files (x86)\\Ampps\\www\\advanced\\yii'
+    'PATH_TRANSLATED' => 'C:\\Program Files (x86)\\Ampps\\www\\advanced\\yii'
+    'DOCUMENT_ROOT' => ''
+    'REQUEST_TIME_FLOAT' => 1538769063.5784
+    'REQUEST_TIME' => 1538769063
+    'argv' => [
+        0 => 'C:\\Program Files (x86)\\Ampps\\www\\advanced\\yii'
+        1 => 'migrate'
+    ]
+    'argc' => 2
+]
+2018-10-05 19:51:35 [-][-][-][error][yii\db\Exception] PDOException: SQLSTATE[HY000]: General error: 1881 Operation not allowed when innodb_forced_recovery > 0. in C:\Program Files (x86)\Ampps\www\advanced\vendor\yiisoft\yii2\db\Command.php:1258
+Stack trace:
+#0 C:\Program Files (x86)\Ampps\www\advanced\vendor\yiisoft\yii2\db\Command.php(1258): PDOStatement->execute()
+#1 C:\Program Files (x86)\Ampps\www\advanced\vendor\yiisoft\yii2\db\Command.php(1075): yii\db\Command->internalExecute('INSERT INTO `mi...')
+#2 C:\Program Files (x86)\Ampps\www\advanced\vendor\yiisoft\yii2\console\controllers\MigrateController.php(276): yii\db\Command->execute()
+#3 C:\Program Files (x86)\Ampps\www\advanced\vendor\yiisoft\yii2\console\controllers\MigrateController.php(211): yii\console\controllers\MigrateController->createMigrationHistoryTable()
+#4 C:\Program Files (x86)\Ampps\www\advanced\vendor\yiisoft\yii2\console\controllers\BaseMigrateController.php(875): yii\console\controllers\MigrateController->getMigrationHistory(NULL)
+#5 C:\Program Files (x86)\Ampps\www\advanced\vendor\yiisoft\yii2\console\controllers\BaseMigrateController.php(166): yii\console\controllers\BaseMigrateController->getNewMigrations()
+#6 [internal function]: yii\console\controllers\BaseMigrateController->actionUp(0)
+#7 C:\Program Files (x86)\Ampps\www\advanced\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#8 C:\Program Files (x86)\Ampps\www\advanced\vendor\yiisoft\yii2\base\Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#9 C:\Program Files (x86)\Ampps\www\advanced\vendor\yiisoft\yii2\console\Controller.php(148): yii\base\Controller->runAction('', Array)
+#10 C:\Program Files (x86)\Ampps\www\advanced\vendor\yiisoft\yii2\base\Module.php(528): yii\console\Controller->runAction('', Array)
+#11 C:\Program Files (x86)\Ampps\www\advanced\vendor\yiisoft\yii2\console\Application.php(180): yii\base\Module->runAction('migrate', Array)
+#12 C:\Program Files (x86)\Ampps\www\advanced\vendor\yiisoft\yii2\console\Application.php(147): yii\console\Application->runAction('migrate', Array)
+#13 C:\Program Files (x86)\Ampps\www\advanced\vendor\yiisoft\yii2\base\Application.php(386): yii\console\Application->handleRequest(Object(yii\console\Request))
+#14 C:\Program Files (x86)\Ampps\www\advanced\yii(23): yii\base\Application->run()
+#15 {main}
+
+Next yii\db\Exception: SQLSTATE[HY000]: General error: 1881 Operation not allowed when innodb_forced_recovery > 0.
+The SQL being executed was: INSERT INTO `migration` (`version`, `apply_time`) VALUES ('m000000_000000_base', 1538769095) in C:\Program Files (x86)\Ampps\www\advanced\vendor\yiisoft\yii2\db\Schema.php:664
+Stack trace:
+#0 C:\Program Files (x86)\Ampps\www\advanced\vendor\yiisoft\yii2\db\Command.php(1263): yii\db\Schema->convertException(Object(PDOException), 'INSERT INTO `mi...')
+#1 C:\Program Files (x86)\Ampps\www\advanced\vendor\yiisoft\yii2\db\Command.php(1075): yii\db\Command->internalExecute('INSERT INTO `mi...')
+#2 C:\Program Files (x86)\Ampps\www\advanced\vendor\yiisoft\yii2\console\controllers\MigrateController.php(276): yii\db\Command->execute()
+#3 C:\Program Files (x86)\Ampps\www\advanced\vendor\yiisoft\yii2\console\controllers\MigrateController.php(211): yii\console\controllers\MigrateController->createMigrationHistoryTable()
+#4 C:\Program Files (x86)\Ampps\www\advanced\vendor\yiisoft\yii2\console\controllers\BaseMigrateController.php(875): yii\console\controllers\MigrateController->getMigrationHistory(NULL)
+#5 C:\Program Files (x86)\Ampps\www\advanced\vendor\yiisoft\yii2\console\controllers\BaseMigrateController.php(166): yii\console\controllers\BaseMigrateController->getNewMigrations()
+#6 [internal function]: yii\console\controllers\BaseMigrateController->actionUp(0)
+#7 C:\Program Files (x86)\Ampps\www\advanced\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#8 C:\Program Files (x86)\Ampps\www\advanced\vendor\yiisoft\yii2\base\Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#9 C:\Program Files (x86)\Ampps\www\advanced\vendor\yiisoft\yii2\console\Controller.php(148): yii\base\Controller->runAction('', Array)
+#10 C:\Program Files (x86)\Ampps\www\advanced\vendor\yiisoft\yii2\base\Module.php(528): yii\console\Controller->runAction('', Array)
+#11 C:\Program Files (x86)\Ampps\www\advanced\vendor\yiisoft\yii2\console\Application.php(180): yii\base\Module->runAction('migrate', Array)
+#12 C:\Program Files (x86)\Ampps\www\advanced\vendor\yiisoft\yii2\console\Application.php(147): yii\console\Application->runAction('migrate', Array)
+#13 C:\Program Files (x86)\Ampps\www\advanced\vendor\yiisoft\yii2\base\Application.php(386): yii\console\Application->handleRequest(Object(yii\console\Request))
+#14 C:\Program Files (x86)\Ampps\www\advanced\yii(23): yii\base\Application->run()
+#15 {main}
+Additional Information:
+Array
+(
+    [0] => HY000
+    [1] => 1881
+    [2] => Operation not allowed when innodb_forced_recovery > 0.
+)
+
+2018-10-05 19:51:35 [-][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'ALLUSERSPROFILE' => 'C:\\ProgramData'
+    'APPDATA' => 'C:\\Users\\david\\AppData\\Roaming'
+    'CommonProgramFiles' => 'C:\\Program Files (x86)\\Common Files'
+    'CommonProgramFiles(x86)' => 'C:\\Program Files (x86)\\Common Files'
+    'CommonProgramW6432' => 'C:\\Program Files\\Common Files'
+    'COMPUTERNAME' => 'LAPTOP-C51GQMFM'
+    'ComSpec' => 'C:\\windows\\system32\\cmd.exe'
+    'FPS_BROWSER_APP_PROFILE_STRING' => 'Internet Explorer'
+    'FPS_BROWSER_USER_PROFILE_STRING' => 'Default'
+    'HOMEDRIVE' => 'C:'
+    'HOMEPATH' => '\\Users\\david'
+    'LOCALAPPDATA' => 'C:\\Users\\david\\AppData\\Local'
+    'LOGONSERVER' => '\\\\LAPTOP-C51GQMFM'
+    'NUMBER_OF_PROCESSORS' => '4'
+    'OneDrive' => 'C:\\Users\\david\\OneDrive'
+    'OnlineServices' => 'Online Services'
+    'OS' => 'Windows_NT'
+    'Path' => 'C:\\Program Files (x86)\\Intel\\iCLS Client\\;C:\\Program Files\\Intel\\iCLS Client\\;C:\\windows\\system32;C:\\windows;C:\\windows\\System32\\Wbem;C:\\windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files\\Intel\\WiFi\\bin\\;C:\\Program Files\\Common Files\\Intel\\WirelessCommon\\;C:\\Program Files\\Git\\cmd;C:\\Program Files (x86)\\Ampps\\php-7.1;C:\\composer;C:\\Users\\david\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Users\\david\\AppData\\Local\\atom\\bin;C:\\Users\\david\\AppData\\Roaming\\Composer\\vendor\\bin'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'PHP_COMMAND' => 'php.exe'
+    'platformcode' => 'KV'
+    'PROCESSOR_ARCHITECTURE' => 'x86'
+    'PROCESSOR_ARCHITEW6432' => 'AMD64'
+    'PROCESSOR_IDENTIFIER' => 'Intel64 Family 6 Model 142 Stepping 9, GenuineIntel'
+    'PROCESSOR_LEVEL' => '6'
+    'PROCESSOR_REVISION' => '8e09'
+    'ProgramData' => 'C:\\ProgramData'
+    'ProgramFiles' => 'C:\\Program Files (x86)'
+    'ProgramFiles(x86)' => 'C:\\Program Files (x86)'
+    'ProgramW6432' => 'C:\\Program Files'
+    'PROMPT' => '$P$G'
+    'PSModulePath' => 'C:\\Program Files\\WindowsPowerShell\\Modules;C:\\windows\\system32\\WindowsPowerShell\\v1.0\\Modules'
+    'PUBLIC' => 'C:\\Users\\Public'
+    'RegionCode' => 'EMEA'
+    'SESSIONNAME' => 'Console'
+    'SystemDrive' => 'C:'
+    'SystemRoot' => 'C:\\windows'
+    'TEMP' => 'C:\\Users\\david\\AppData\\Local\\Temp'
+    'TMP' => 'C:\\Users\\david\\AppData\\Local\\Temp'
+    'USERDOMAIN' => 'LAPTOP-C51GQMFM'
+    'USERDOMAIN_ROAMINGPROFILE' => 'LAPTOP-C51GQMFM'
+    'USERNAME' => 'david'
+    'USERPROFILE' => 'C:\\Users\\david'
+    'windir' => 'C:\\windows'
+    'YII_PATH' => 'C:\\Program Files (x86)\\Ampps\\www\\advanced\\'
+    'PHP_SELF' => 'C:\\Program Files (x86)\\Ampps\\www\\advanced\\yii'
+    'SCRIPT_NAME' => 'C:\\Program Files (x86)\\Ampps\\www\\advanced\\yii'
+    'SCRIPT_FILENAME' => 'C:\\Program Files (x86)\\Ampps\\www\\advanced\\yii'
+    'PATH_TRANSLATED' => 'C:\\Program Files (x86)\\Ampps\\www\\advanced\\yii'
+    'DOCUMENT_ROOT' => ''
+    'REQUEST_TIME_FLOAT' => 1538769095.8772
+    'REQUEST_TIME' => 1538769095
+    'argv' => [
+        0 => 'C:\\Program Files (x86)\\Ampps\\www\\advanced\\yii'
+        1 => 'migrate'
+    ]
+    'argc' => 2
+]
+2018-10-05 19:55:31 [-][-][-][error][yii\db\Exception] PDOException: SQLSTATE[HY000]: General error: 1881 Operation not allowed when innodb_forced_recovery > 0. in C:\Program Files (x86)\Ampps\www\advanced\vendor\yiisoft\yii2\db\Command.php:1258
+Stack trace:
+#0 C:\Program Files (x86)\Ampps\www\advanced\vendor\yiisoft\yii2\db\Command.php(1258): PDOStatement->execute()
+#1 C:\Program Files (x86)\Ampps\www\advanced\vendor\yiisoft\yii2\db\Command.php(1075): yii\db\Command->internalExecute('INSERT INTO `mi...')
+#2 C:\Program Files (x86)\Ampps\www\advanced\vendor\yiisoft\yii2\console\controllers\MigrateController.php(289): yii\db\Command->execute()
+#3 C:\Program Files (x86)\Ampps\www\advanced\vendor\yiisoft\yii2\console\controllers\BaseMigrateController.php(726): yii\console\controllers\MigrateController->addMigrationHistory('m130524_201442_...')
+#4 C:\Program Files (x86)\Ampps\www\advanced\vendor\yiisoft\yii2\console\controllers\BaseMigrateController.php(199): yii\console\controllers\BaseMigrateController->migrateUp('m130524_201442_...')
+#5 [internal function]: yii\console\controllers\BaseMigrateController->actionUp(0)
+#6 C:\Program Files (x86)\Ampps\www\advanced\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#7 C:\Program Files (x86)\Ampps\www\advanced\vendor\yiisoft\yii2\base\Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#8 C:\Program Files (x86)\Ampps\www\advanced\vendor\yiisoft\yii2\console\Controller.php(148): yii\base\Controller->runAction('', Array)
+#9 C:\Program Files (x86)\Ampps\www\advanced\vendor\yiisoft\yii2\base\Module.php(528): yii\console\Controller->runAction('', Array)
+#10 C:\Program Files (x86)\Ampps\www\advanced\vendor\yiisoft\yii2\console\Application.php(180): yii\base\Module->runAction('migrate', Array)
+#11 C:\Program Files (x86)\Ampps\www\advanced\vendor\yiisoft\yii2\console\Application.php(147): yii\console\Application->runAction('migrate', Array)
+#12 C:\Program Files (x86)\Ampps\www\advanced\vendor\yiisoft\yii2\base\Application.php(386): yii\console\Application->handleRequest(Object(yii\console\Request))
+#13 C:\Program Files (x86)\Ampps\www\advanced\yii(23): yii\base\Application->run()
+#14 {main}
+
+Next yii\db\Exception: SQLSTATE[HY000]: General error: 1881 Operation not allowed when innodb_forced_recovery > 0.
+The SQL being executed was: INSERT INTO `migration` (`version`, `apply_time`) VALUES ('m130524_201442_init', 1538769331) in C:\Program Files (x86)\Ampps\www\advanced\vendor\yiisoft\yii2\db\Schema.php:664
+Stack trace:
+#0 C:\Program Files (x86)\Ampps\www\advanced\vendor\yiisoft\yii2\db\Command.php(1263): yii\db\Schema->convertException(Object(PDOException), 'INSERT INTO `mi...')
+#1 C:\Program Files (x86)\Ampps\www\advanced\vendor\yiisoft\yii2\db\Command.php(1075): yii\db\Command->internalExecute('INSERT INTO `mi...')
+#2 C:\Program Files (x86)\Ampps\www\advanced\vendor\yiisoft\yii2\console\controllers\MigrateController.php(289): yii\db\Command->execute()
+#3 C:\Program Files (x86)\Ampps\www\advanced\vendor\yiisoft\yii2\console\controllers\BaseMigrateController.php(726): yii\console\controllers\MigrateController->addMigrationHistory('m130524_201442_...')
+#4 C:\Program Files (x86)\Ampps\www\advanced\vendor\yiisoft\yii2\console\controllers\BaseMigrateController.php(199): yii\console\controllers\BaseMigrateController->migrateUp('m130524_201442_...')
+#5 [internal function]: yii\console\controllers\BaseMigrateController->actionUp(0)
+#6 C:\Program Files (x86)\Ampps\www\advanced\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#7 C:\Program Files (x86)\Ampps\www\advanced\vendor\yiisoft\yii2\base\Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#8 C:\Program Files (x86)\Ampps\www\advanced\vendor\yiisoft\yii2\console\Controller.php(148): yii\base\Controller->runAction('', Array)
+#9 C:\Program Files (x86)\Ampps\www\advanced\vendor\yiisoft\yii2\base\Module.php(528): yii\console\Controller->runAction('', Array)
+#10 C:\Program Files (x86)\Ampps\www\advanced\vendor\yiisoft\yii2\console\Application.php(180): yii\base\Module->runAction('migrate', Array)
+#11 C:\Program Files (x86)\Ampps\www\advanced\vendor\yiisoft\yii2\console\Application.php(147): yii\console\Application->runAction('migrate', Array)
+#12 C:\Program Files (x86)\Ampps\www\advanced\vendor\yiisoft\yii2\base\Application.php(386): yii\console\Application->handleRequest(Object(yii\console\Request))
+#13 C:\Program Files (x86)\Ampps\www\advanced\yii(23): yii\base\Application->run()
+#14 {main}
+Additional Information:
+Array
+(
+    [0] => HY000
+    [1] => 1881
+    [2] => Operation not allowed when innodb_forced_recovery > 0.
+)
+
+2018-10-05 19:55:25 [-][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'ALLUSERSPROFILE' => 'C:\\ProgramData'
+    'APPDATA' => 'C:\\Users\\david\\AppData\\Roaming'
+    'CommonProgramFiles' => 'C:\\Program Files (x86)\\Common Files'
+    'CommonProgramFiles(x86)' => 'C:\\Program Files (x86)\\Common Files'
+    'CommonProgramW6432' => 'C:\\Program Files\\Common Files'
+    'COMPUTERNAME' => 'LAPTOP-C51GQMFM'
+    'ComSpec' => 'C:\\windows\\system32\\cmd.exe'
+    'FPS_BROWSER_APP_PROFILE_STRING' => 'Internet Explorer'
+    'FPS_BROWSER_USER_PROFILE_STRING' => 'Default'
+    'HOMEDRIVE' => 'C:'
+    'HOMEPATH' => '\\Users\\david'
+    'LOCALAPPDATA' => 'C:\\Users\\david\\AppData\\Local'
+    'LOGONSERVER' => '\\\\LAPTOP-C51GQMFM'
+    'NUMBER_OF_PROCESSORS' => '4'
+    'OneDrive' => 'C:\\Users\\david\\OneDrive'
+    'OnlineServices' => 'Online Services'
+    'OS' => 'Windows_NT'
+    'Path' => 'C:\\Program Files (x86)\\Intel\\iCLS Client\\;C:\\Program Files\\Intel\\iCLS Client\\;C:\\windows\\system32;C:\\windows;C:\\windows\\System32\\Wbem;C:\\windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files\\Intel\\WiFi\\bin\\;C:\\Program Files\\Common Files\\Intel\\WirelessCommon\\;C:\\Program Files\\Git\\cmd;C:\\Program Files (x86)\\Ampps\\php-7.1;C:\\composer;C:\\Users\\david\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Users\\david\\AppData\\Local\\atom\\bin;C:\\Users\\david\\AppData\\Roaming\\Composer\\vendor\\bin'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'PHP_COMMAND' => 'php.exe'
+    'platformcode' => 'KV'
+    'PROCESSOR_ARCHITECTURE' => 'x86'
+    'PROCESSOR_ARCHITEW6432' => 'AMD64'
+    'PROCESSOR_IDENTIFIER' => 'Intel64 Family 6 Model 142 Stepping 9, GenuineIntel'
+    'PROCESSOR_LEVEL' => '6'
+    'PROCESSOR_REVISION' => '8e09'
+    'ProgramData' => 'C:\\ProgramData'
+    'ProgramFiles' => 'C:\\Program Files (x86)'
+    'ProgramFiles(x86)' => 'C:\\Program Files (x86)'
+    'ProgramW6432' => 'C:\\Program Files'
+    'PROMPT' => '$P$G'
+    'PSModulePath' => 'C:\\Program Files\\WindowsPowerShell\\Modules;C:\\windows\\system32\\WindowsPowerShell\\v1.0\\Modules'
+    'PUBLIC' => 'C:\\Users\\Public'
+    'RegionCode' => 'EMEA'
+    'SESSIONNAME' => 'Console'
+    'SystemDrive' => 'C:'
+    'SystemRoot' => 'C:\\windows'
+    'TEMP' => 'C:\\Users\\david\\AppData\\Local\\Temp'
+    'TMP' => 'C:\\Users\\david\\AppData\\Local\\Temp'
+    'USERDOMAIN' => 'LAPTOP-C51GQMFM'
+    'USERDOMAIN_ROAMINGPROFILE' => 'LAPTOP-C51GQMFM'
+    'USERNAME' => 'david'
+    'USERPROFILE' => 'C:\\Users\\david'
+    'windir' => 'C:\\windows'
+    'YII_PATH' => 'C:\\Program Files (x86)\\Ampps\\www\\advanced\\'
+    'PHP_SELF' => 'C:\\Program Files (x86)\\Ampps\\www\\advanced\\yii'
+    'SCRIPT_NAME' => 'C:\\Program Files (x86)\\Ampps\\www\\advanced\\yii'
+    'SCRIPT_FILENAME' => 'C:\\Program Files (x86)\\Ampps\\www\\advanced\\yii'
+    'PATH_TRANSLATED' => 'C:\\Program Files (x86)\\Ampps\\www\\advanced\\yii'
+    'DOCUMENT_ROOT' => ''
+    'REQUEST_TIME_FLOAT' => 1538769325.6867
+    'REQUEST_TIME' => 1538769325
+    'argv' => [
+        0 => 'C:\\Program Files (x86)\\Ampps\\www\\advanced\\yii'
+        1 => 'migrate'
+    ]
+    'argc' => 2
+]
+2018-10-05 19:57:31 [-][-][-][error][yii\db\Exception] PDOException: SQLSTATE[42S01]: Base table or view already exists: 1050 Table 'user' already exists in C:\Program Files (x86)\Ampps\www\advanced\vendor\yiisoft\yii2\db\Command.php:1258
+Stack trace:
+#0 C:\Program Files (x86)\Ampps\www\advanced\vendor\yiisoft\yii2\db\Command.php(1258): PDOStatement->execute()
+#1 C:\Program Files (x86)\Ampps\www\advanced\vendor\yiisoft\yii2\db\Command.php(1075): yii\db\Command->internalExecute('CREATE TABLE `u...')
+#2 C:\Program Files (x86)\Ampps\www\advanced\vendor\yiisoft\yii2\db\Migration.php(323): yii\db\Command->execute()
+#3 C:\Program Files (x86)\Ampps\www\advanced\console\migrations\m130524_201442_init.php(26): yii\db\Migration->createTable('{{%user}}', Array, 'CHARACTER SET u...')
+#4 C:\Program Files (x86)\Ampps\www\advanced\vendor\yiisoft\yii2\console\controllers\BaseMigrateController.php(725): m130524_201442_init->up()
+#5 C:\Program Files (x86)\Ampps\www\advanced\vendor\yiisoft\yii2\console\controllers\BaseMigrateController.php(199): yii\console\controllers\BaseMigrateController->migrateUp('m130524_201442_...')
+#6 [internal function]: yii\console\controllers\BaseMigrateController->actionUp(0)
+#7 C:\Program Files (x86)\Ampps\www\advanced\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#8 C:\Program Files (x86)\Ampps\www\advanced\vendor\yiisoft\yii2\base\Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#9 C:\Program Files (x86)\Ampps\www\advanced\vendor\yiisoft\yii2\console\Controller.php(148): yii\base\Controller->runAction('', Array)
+#10 C:\Program Files (x86)\Ampps\www\advanced\vendor\yiisoft\yii2\base\Module.php(528): yii\console\Controller->runAction('', Array)
+#11 C:\Program Files (x86)\Ampps\www\advanced\vendor\yiisoft\yii2\console\Application.php(180): yii\base\Module->runAction('migrate', Array)
+#12 C:\Program Files (x86)\Ampps\www\advanced\vendor\yiisoft\yii2\console\Application.php(147): yii\console\Application->runAction('migrate', Array)
+#13 C:\Program Files (x86)\Ampps\www\advanced\vendor\yiisoft\yii2\base\Application.php(386): yii\console\Application->handleRequest(Object(yii\console\Request))
+#14 C:\Program Files (x86)\Ampps\www\advanced\yii(23): yii\base\Application->run()
+#15 {main}
+
+Next yii\db\Exception: SQLSTATE[42S01]: Base table or view already exists: 1050 Table 'user' already exists
+The SQL being executed was: CREATE TABLE `user` (
+	`id` int(11) NOT NULL AUTO_INCREMENT PRIMARY KEY,
+	`username` varchar(255) NOT NULL UNIQUE,
+	`auth_key` varchar(32) NOT NULL,
+	`password_hash` varchar(255) NOT NULL,
+	`password_reset_token` varchar(255) UNIQUE,
+	`email` varchar(255) NOT NULL UNIQUE,
+	`status` smallint(6) NOT NULL DEFAULT 10,
+	`created_at` int(11) NOT NULL,
+	`updated_at` int(11) NOT NULL
+) CHARACTER SET utf8 COLLATE utf8_unicode_ci ENGINE=InnoDB in C:\Program Files (x86)\Ampps\www\advanced\vendor\yiisoft\yii2\db\Schema.php:664
+Stack trace:
+#0 C:\Program Files (x86)\Ampps\www\advanced\vendor\yiisoft\yii2\db\Command.php(1263): yii\db\Schema->convertException(Object(PDOException), 'CREATE TABLE `u...')
+#1 C:\Program Files (x86)\Ampps\www\advanced\vendor\yiisoft\yii2\db\Command.php(1075): yii\db\Command->internalExecute('CREATE TABLE `u...')
+#2 C:\Program Files (x86)\Ampps\www\advanced\vendor\yiisoft\yii2\db\Migration.php(323): yii\db\Command->execute()
+#3 C:\Program Files (x86)\Ampps\www\advanced\console\migrations\m130524_201442_init.php(26): yii\db\Migration->createTable('{{%user}}', Array, 'CHARACTER SET u...')
+#4 C:\Program Files (x86)\Ampps\www\advanced\vendor\yiisoft\yii2\console\controllers\BaseMigrateController.php(725): m130524_201442_init->up()
+#5 C:\Program Files (x86)\Ampps\www\advanced\vendor\yiisoft\yii2\console\controllers\BaseMigrateController.php(199): yii\console\controllers\BaseMigrateController->migrateUp('m130524_201442_...')
+#6 [internal function]: yii\console\controllers\BaseMigrateController->actionUp(0)
+#7 C:\Program Files (x86)\Ampps\www\advanced\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#8 C:\Program Files (x86)\Ampps\www\advanced\vendor\yiisoft\yii2\base\Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#9 C:\Program Files (x86)\Ampps\www\advanced\vendor\yiisoft\yii2\console\Controller.php(148): yii\base\Controller->runAction('', Array)
+#10 C:\Program Files (x86)\Ampps\www\advanced\vendor\yiisoft\yii2\base\Module.php(528): yii\console\Controller->runAction('', Array)
+#11 C:\Program Files (x86)\Ampps\www\advanced\vendor\yiisoft\yii2\console\Application.php(180): yii\base\Module->runAction('migrate', Array)
+#12 C:\Program Files (x86)\Ampps\www\advanced\vendor\yiisoft\yii2\console\Application.php(147): yii\console\Application->runAction('migrate', Array)
+#13 C:\Program Files (x86)\Ampps\www\advanced\vendor\yiisoft\yii2\base\Application.php(386): yii\console\Application->handleRequest(Object(yii\console\Request))
+#14 C:\Program Files (x86)\Ampps\www\advanced\yii(23): yii\base\Application->run()
+#15 {main}
+Additional Information:
+Array
+(
+    [0] => 42S01
+    [1] => 1050
+    [2] => Table 'user' already exists
+)
+
+2018-10-05 19:57:28 [-][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'ALLUSERSPROFILE' => 'C:\\ProgramData'
+    'APPDATA' => 'C:\\Users\\david\\AppData\\Roaming'
+    'CommonProgramFiles' => 'C:\\Program Files (x86)\\Common Files'
+    'CommonProgramFiles(x86)' => 'C:\\Program Files (x86)\\Common Files'
+    'CommonProgramW6432' => 'C:\\Program Files\\Common Files'
+    'COMPUTERNAME' => 'LAPTOP-C51GQMFM'
+    'ComSpec' => 'C:\\windows\\system32\\cmd.exe'
+    'FPS_BROWSER_APP_PROFILE_STRING' => 'Internet Explorer'
+    'FPS_BROWSER_USER_PROFILE_STRING' => 'Default'
+    'HOMEDRIVE' => 'C:'
+    'HOMEPATH' => '\\Users\\david'
+    'LOCALAPPDATA' => 'C:\\Users\\david\\AppData\\Local'
+    'LOGONSERVER' => '\\\\LAPTOP-C51GQMFM'
+    'NUMBER_OF_PROCESSORS' => '4'
+    'OneDrive' => 'C:\\Users\\david\\OneDrive'
+    'OnlineServices' => 'Online Services'
+    'OS' => 'Windows_NT'
+    'Path' => 'C:\\Program Files (x86)\\Intel\\iCLS Client\\;C:\\Program Files\\Intel\\iCLS Client\\;C:\\windows\\system32;C:\\windows;C:\\windows\\System32\\Wbem;C:\\windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files\\Intel\\WiFi\\bin\\;C:\\Program Files\\Common Files\\Intel\\WirelessCommon\\;C:\\Program Files\\Git\\cmd;C:\\Program Files (x86)\\Ampps\\php-7.1;C:\\composer;C:\\Users\\david\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Users\\david\\AppData\\Local\\atom\\bin;C:\\Users\\david\\AppData\\Roaming\\Composer\\vendor\\bin'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'PHP_COMMAND' => 'php.exe'
+    'platformcode' => 'KV'
+    'PROCESSOR_ARCHITECTURE' => 'x86'
+    'PROCESSOR_ARCHITEW6432' => 'AMD64'
+    'PROCESSOR_IDENTIFIER' => 'Intel64 Family 6 Model 142 Stepping 9, GenuineIntel'
+    'PROCESSOR_LEVEL' => '6'
+    'PROCESSOR_REVISION' => '8e09'
+    'ProgramData' => 'C:\\ProgramData'
+    'ProgramFiles' => 'C:\\Program Files (x86)'
+    'ProgramFiles(x86)' => 'C:\\Program Files (x86)'
+    'ProgramW6432' => 'C:\\Program Files'
+    'PROMPT' => '$P$G'
+    'PSModulePath' => 'C:\\Program Files\\WindowsPowerShell\\Modules;C:\\windows\\system32\\WindowsPowerShell\\v1.0\\Modules'
+    'PUBLIC' => 'C:\\Users\\Public'
+    'RegionCode' => 'EMEA'
+    'SESSIONNAME' => 'Console'
+    'SystemDrive' => 'C:'
+    'SystemRoot' => 'C:\\windows'
+    'TEMP' => 'C:\\Users\\david\\AppData\\Local\\Temp'
+    'TMP' => 'C:\\Users\\david\\AppData\\Local\\Temp'
+    'USERDOMAIN' => 'LAPTOP-C51GQMFM'
+    'USERDOMAIN_ROAMINGPROFILE' => 'LAPTOP-C51GQMFM'
+    'USERNAME' => 'david'
+    'USERPROFILE' => 'C:\\Users\\david'
+    'windir' => 'C:\\windows'
+    'YII_PATH' => 'C:\\Program Files (x86)\\Ampps\\www\\advanced\\'
+    'PHP_SELF' => 'C:\\Program Files (x86)\\Ampps\\www\\advanced\\yii'
+    'SCRIPT_NAME' => 'C:\\Program Files (x86)\\Ampps\\www\\advanced\\yii'
+    'SCRIPT_FILENAME' => 'C:\\Program Files (x86)\\Ampps\\www\\advanced\\yii'
+    'PATH_TRANSLATED' => 'C:\\Program Files (x86)\\Ampps\\www\\advanced\\yii'
+    'DOCUMENT_ROOT' => ''
+    'REQUEST_TIME_FLOAT' => 1538769448.4566
+    'REQUEST_TIME' => 1538769448
+    'argv' => [
+        0 => 'C:\\Program Files (x86)\\Ampps\\www\\advanced\\yii'
+        1 => 'migrate'
+    ]
+    'argc' => 2
+]
